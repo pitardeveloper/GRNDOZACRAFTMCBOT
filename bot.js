@@ -342,5 +342,202 @@ client.on('message', message => {
 }
 });
 
+
+client.on('guildMemberAdd', member => {
+  let channel = member.guild.channels.find('name','ترحيب
+     if (!channel) return; 
+          let memberavatar = member.user.avatarURL
+        let embed = new Discord.RichEmbed()
+    .setThumbnail(memberavatar)
+       .setColor('BLUE')
+       .addField(':sunflower:  حياك الله منور السيرفر',`**[ ${member} ]**`,true)
+       .addField(' :levitate: انت رقم',`**[ ${member.guild.memberCount} ]**`,true)
+       channel.send(``)
+     channel.send({embed:embed});
+   });
+
+
+
+client.on('guildMemberRemove', member => {
+      let channel = member.guild.channels.find('name', 'ترحيب
+        if (!channel) return; 
+        let memberavatar = member.user.avatarURL
+      let embed = new Discord.RichEmbed()
+          .setColor('RED')
+          .setThumbnail(member.avatar)
+          .addField(':x: لقد خرج ',`**[ ${member} ]**`,true)
+          .addField(':man_dancing:  تبقي',`**[ ${member.guild.memberCount} ]**`,true)      
+          channel.send(``)
+        channel.send({embed:embed});
+      });
+
+
+client.on("roleCreate",  rc => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(` + Role Created`)
+  .setDescription(`A role Has been created \n Name : ${rc.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("roleDelete",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(` - Role Delete`)
+  .setDescription(`A role has been deleted \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("guildUpdate",  rc => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`+ guild updated`)
+  .setDescription(`A guild has been updated \n Name : ${rc.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("memberKick",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(` Member Kicked -`)
+  .setDescription(`A member has been kicked by \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("memberPrune",  rc => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`Member Pruned`)
+  .setDescription(`A member has been pruned \n Name : ${rc.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("memberUpdate",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(` Member Updated`)
+  .setDescription(`A member has been updated to \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("memberRoleUpdate",  rc => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(` Updated Roles`)
+  .setDescription(`Updated Roles to \n Name : ${rc.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("roleUpdate",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`Role Updated`)
+  .setDescription(`A role has been updated to \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("inviteCreate",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`Invite Link Created +`)
+  .setDescription(`A Invite Link has been Created \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("inviteUpdate",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`Role Updated`)
+  .setDescription(`A role has been updated to \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("inviteDelete",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`Invite Link Deleted -`)
+  .setDescription(`A invite link deleted \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("emojiUpdate",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`Emoji Updated`)
+  .setDescription(`A emoji has been updated to \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("emojiDelete",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`Emoji Deleted -`)
+  .setDescription(`A emoji has been deleted \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("emojiCreate",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`Emoji Created + `)
+  .setDescription(`A emoji has been created \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+client.on("messageDelete",  rd => {
+const channel = rd.guild.channels.find("name", "اللوق")
+if(channel) {
+  var embed = new Discord.RichEmbed()
+  .setTitle(`Message Deleted -`)
+  .setDescription(`A Message has been deleted \n Name : ${rd.name}`)
+  .setColor(`RANDOM`)
+channel.sendEmbed(embed)
+}
+});
+
+
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
