@@ -124,11 +124,15 @@ client.on('message', message => {
         const embed = new Discord.RichEmbed()
         .setColor("#00FFFF")
         .setDescription(`**About for this bot**
-**Ram Usage : 500 **
+**Ram Useage : 500 MB**
 
 **Bot Ram : 10 GB**
 
-**Server Ram : 1100 Mb**
+**Server Ram : 300 GB**
+
+**Server Ram Useage : 300 GB**
+
+**GrndozaCraftMc Server Ram : 1100 Mb**
 
 **web Taken : 124 ms**
 
