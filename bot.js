@@ -344,7 +344,7 @@ client.on('message', message => {
 
 
 client.on('guildMemberAdd', member => {
-  let channel = member.guild.channels.find('name','ترحيب
+  let channel = member.guild.channels.find('name','ترحيب');
      if (!channel) return; 
           let memberavatar = member.user.avatarURL
         let embed = new Discord.RichEmbed()
@@ -359,7 +359,7 @@ client.on('guildMemberAdd', member => {
 
 
 client.on('guildMemberRemove', member => {
-      let channel = member.guild.channels.find('name', 'ترحيب
+      let channel = member.guild.channels.find('name', 'ترحيب');
         if (!channel) return; 
         let memberavatar = member.user.avatarURL
       let embed = new Discord.RichEmbed()
